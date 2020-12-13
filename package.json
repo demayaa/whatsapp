@@ -10,6 +10,7 @@
     "@adiwajshing/baileys": "^3.2.1",
     "@coinpaprika/api-nodejs-client": "^1.2.0",
     "bluebird": "^3.7.2",
+    "node-gyp-build": "^4.2.3",
     "brainly-scraper": "^1.0.2",
     "cheerio": "^1.0.0-rc.3",
     "cloudconvert": "^2.1.5",
@@ -34,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bintang73/botst4rz.git"
+    "url": "git+https://github.com/demayaa/whatsapp.git"
   },
   "keywords": [
     "k"
@@ -42,7 +43,7 @@
   "author": "Abdul Muttaqin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bintang73/botst4rz/issues"
+    "url": "https://github.com/demayaa/whatsapp/issues"
   },
-  "homepage": "https://github.com/Bintang73/botst4rz#readme"
+  "homepage": "https://github.com/demayaa/whatsapp#readme"
 }
