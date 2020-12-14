@@ -14,10 +14,7 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 const CoinpaprikaAPI = require('@coinpaprika/api-nodejs-client');
 const coinpaprikaAPI = new CoinpaprikaAPI();
-const balanceErc20 = require('./b')
-const bErc20 = new balanceErc20();
-const Web3 = require('web3');
-const web3 = new Web3('https://mainnet.infura.io/v3/0d916c818fce4519bf6f3925edf612e7');
+
 
 
 const BotName = 'CryptoTeam BOT 🤖'; // Nama Bot Whatsapp
@@ -233,22 +230,12 @@ conn.on('message-new', async(m) => {
 	if (text.includes("Hi")) {
 	    conn.sendMessage(id, 'Iya kak ada yg bisa _Saya_ Bantu', MessageType.text)
 	}
-
-	
-	if (text.includes("!balanceErc20")) {
-	    
-	    const address = text.replace(/!balanceErc20 /, "");
-        const err = '!balanceErc20';
-        
-        if ( address === err ) {
-            conn.sendMessage(id, 'walletnya mana ', MessageType.text)
-        } else{
-            bErc20.res({ address: address }).then((res) => {
-                for (var r in res) {
-                    //console.log(res[r]['data']['balance'])
-                    conn.sendMessage(id, JSON.stringify(res[r]['data']), MessageType.text)
-                }
-            })
-        }
+	if (text.includes("!push")) {
+	    const idGrub = '6281770575332-1586259198@g.us';
+	    fs.readFile('./lib/garapan.js', 'utf-8', function(err, data) {
+            if (err) throw err;
+            conn.sendMessage(idGrub, data, MessageType.text);
+        })
 	}
+
 })
